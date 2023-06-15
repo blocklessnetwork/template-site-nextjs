@@ -1,0 +1,20 @@
+name = "template-site-nextjs"
+version = "1.0.0"
+type = "site"
+content_type = "html"
+
+[deployment]
+permission = "private"
+nodes = 4
+
+[build]
+dir = ".bls"
+public_dir = "out"
+entry = "template-site-nextjs_debug.wasm"
+command = "npm run build && npm run export"
+
+[build_release]
+dir = ".bls"
+public_dir = "out"
+entry = "template-site-nextjs.wasm"
+command = "npm run build && npm run export"
